@@ -1,0 +1,164 @@
+body {
+    background-color: #0a0a0a;
+    color: #e6e6e6;
+    font-family: 'Georgia', serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efecto de lluvia */
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.drop {
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Estilo del cuadro */
+.container {
+    background-color: #111;
+    border: 2px solid #333;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%; 
+    text-align: center;
+    box-shadow: 
+        0 0 15px rgba(232, 219, 232, 0.6),  
+        0 0 30px rgba(234, 219, 234, 0.4), 
+        0 0 45px rgba(215, 198, 215, 0.2);  
+    padding: 20px;
+    animation: floating 4s ease-in-out infinite alternate,
+               ledGlow 1s infinite alternate;
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px); 
+    }
+}
+
+@keyframes ledGlow {
+    from {
+        box-shadow: 
+            0 0 15px rgba(229, 214, 229, 0.6),
+            0 0 30px rgba(232, 228, 232, 0.4),
+            0 0 45px rgba(240, 229, 240, 0.2);
+    }
+    to {
+        box-shadow: 
+            0 0 20px rgba(229, 214, 229, 0.8),
+            0 0 40px rgba(229, 214, 229, 0.6),
+            0 0 60px rgba(229, 214, 229, 0.3);
+    }
+}
+
+.profile-header {
+    background-color: #222;
+    padding: 15px;
+    border-bottom: 2px solid #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap; 
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #0a0a0a;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.profile-pic:hover {
+    transform: scale(1.1) rotate(5deg);  
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+}
+
+.profile-name {
+    text-align: left;
+    margin-left: 15px; 
+}
+
+.profile-content {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.decor {
+    color: #bbb;
+    margin: 10px 0;
+}
+
+.footer {
+    padding-top: 15px;
+    font-style: italic;
+    font-size: 12px;
+    color: #aaa;
+    animation: blink 2s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+        color: #aaa;
+    }
+    to {
+        opacity: 0.6;
+        color: #e6e6e6;
+    }
+}
+
+.quote {
+    font-style: italic;
+    color: #d3d3d3;
+}
+
+.author {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+.achievements {
+    background-color: #181818;
+    padding: 10px;
+    margin-top: 15px;
+    border-top: 2px solid #0a0a0a;
+}
+
+.badges img {
+    width: 30px;
+    margin: 5px;
+    border-radius: 5px;
+}

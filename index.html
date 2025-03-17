@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vql</title>
+    <link rel="icon" href="calen.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="rain">
+        <script>
+            const rainContainer = document.querySelector('.rain');
+            for (let i = 0; i < 100; i++) {
+                const drop = document.createElement('div');
+                drop.classList.add('drop');
+                drop.style.left = Math.random() * 100 + 'vw';
+                drop.style.animationDuration = (Math.random() * 1.5 + 0.5) + 's';
+                drop.style.animationDelay = Math.random() * 2 + 's';
+                rainContainer.appendChild(drop);
+            }
+        </script>
+    </div>
+
+    <div class="container">
+        <div class="profile-header">
+            <img src="asicon.jpeg" alt="" class="profile-pic">
+            <div class="profile-name">
+                <h1>Vql †</h1>
+                <p>He | 20</p>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <p class="decor">✧･ﾟ: *✧･ﾟ:* ✧･ﾟ: *✧･ﾟ:* ✧･ﾟ: *✧･ﾟ:* ✧</p>
+            <p class="quote">
+                "I keep waiting for you to reach out to me, even if you've caused me pain. My clinging, torn love feels
+                complete by your side."<br>
+                <span class="author">- 19212</span>
+            </p>
+            <p class="decor">✧･ﾟ: *✧･ﾟ:* ✧･ﾟ: *✧･ﾟ:* ✧･ﾟ: *✧･ﾟ:* ✧</p>
+        </div>
+
+        <div class="achievements">
+            <p><strong>Awards:</strong> 20 | <strong>Badges:</strong> 5 | <strong>Reviews:</strong> 15</p>
+            <div class="badges">
+                <img src="demonio24px.png" alt="">
+                <img src="coraozn24px.png" alt="">
+                <img src="24ojopx.png" alt="">
+                <img src="mar24px.png" alt="">
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>“I hope tonight is my last.”</p>
+        </div>
+    </div>
+</body>
+
+</html>
